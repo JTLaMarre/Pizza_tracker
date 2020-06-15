@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <title>pizza tracker!</title>
+</head>
+
+<body>
+    <section class="hero is-info is-bold has-text-centered">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-size-1">
+                    Pizza Tracker
+                </h1>
+                <h2>track your pizza</h2>
+            </div>
+        </div>
+    </section>
+    <div class="columns">
+        <div class="column">
+            <div class="card">
+                <p class="card-header-title is-size-2" id="startedHeader">Your order has started</p>
+            </div>
+            <div class="card-content has-background-info" id="startedContent">
+                <div class="content">
+                    <i class="fas fa-pizza-slice fa-10x" style="color:red"></i>
+                </div>
+            </div>
+        </div>
+        <div class="column is-info">
+            <div class="card">
+            <p class="card-header-title is-size-2 has-background-danger" id="ovenHeader">Your order is in the oven</p>
+                </div>
+                <div class="card-content has-background-danger" id="ovenContent">
+                    <div class="content">
+                        <i class="fas fa-fire fa-10x"style="color:blue"></i>
+                    </div>
+                </div>
+        </div>
+        <div class="column is-info">
+            <div class="card">
+            <p class="card-header-title is-size-2"id="boxingHeader">Boxing your pizza </p>
+        </div>
+        <div class="card-content has-background-info"id="boxingId">
+            <div class="content">
+                <i class="fas fa-box fa-10x"style="color:red"></i>
+            </div>
+        </div>
+        </div>
+        <div class="column is-info">
+            <div class="card">
+            <p class="card-header-title is-size-2"id="deliveryHeader">Out for delivery </p>
+        </div>
+        <div class="card-content has-background-info" id="deliveryContent">
+            <div class="content">
+                <i class="fas fa-car-side fa-10x"style="color:red"></i>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Pizzas</title>
+</head>
+
+<body>
+    <section class="hero is-dark has-text-centered">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-size-1">Pizzas</h1>
+                <i class="fas fa-pizza-slice fa-5x" style="color: white"></i>
+            </div>
+        </div>
+    </section>
+    <div class="columns">
+        <div class="column is-one-quarter">
+            <!-- dropdown for pizza's that have been ordered -->
+            <div class="dropdown is-hoverable">
+                <div class="dropdown-trigger">
+                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                        <span>Pizza Orders</span>
+                        <span class="icon is-small">
+                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                        <a href="#" class="dropdown-item">
+                            A pizza
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- end of pizza dropdown code -->
+        </div>
+        <!-- end pizza column div -->
+        <!-- active pizza div -->
+        <div class="column is-three-quarters">
+            <div class="card">
+                <div class="card-header-title is-size-3">
+                    Pizza ID
+                </div>
+                <div class="card-content has-background-dark">
+                    <!-- pizza status drop down menu -->
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
+                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                                <span>Pizza Status</span>
+                                <span class="icon is-small">
+                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <a href="#" class="dropdown-item">
+                                    Starting
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    Baking
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    Boxing
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    Deliverying
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end status drop down -->
+                    <p class="is-size-4 has-text-white">Current Pizza Status</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

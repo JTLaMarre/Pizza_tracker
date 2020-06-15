@@ -6,11 +6,11 @@ USE pizza_tracker_db;
 
 CREATE TABLE pizzas (
     id INTEGER NOT NULL AUTO_INCREMENT;
-    crust_type VARCHAR(255) DEFAULT "REGULAR";
-    sause_type VARCHAR(255) DEFAULT "REGULAR";
-    cheese_type VARCHAR(255) DEFAULT "REGULAR";
-    topping1 VARCHAR(255) DEFAULT "NONE";
-    topping2 VARCHAR(255) DEFAULT "NONE";
+    crust_type VARCHAR(255) DEFAULT "Normal";
+    sause_type VARCHAR(255) DEFAULT "Normal";
+    cheese_type VARCHAR(255) DEFAULT "Normal";
+    topping1 VARCHAR(255) DEFAULT "None";
+    topping2 VARCHAR(255) DEFAULT "None";
     started_status VARCHAR(255) DEFAULT "incomplete";
     started_employee INTEGER;
     oven_status VARCHAR(255) DEFAULT "incomplete";
@@ -19,6 +19,7 @@ CREATE TABLE pizzas (
     box_employee INTEGER;
     delivery_status VARCHAR(255) DEFAULT "incomplete";
     delivery_employee INTEGER;
+    phone_number INTEGER;
     PRIMARY KEY (id);
 );
 

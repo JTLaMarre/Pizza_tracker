@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <title>pizza tracker!</title>
 </head>
 
@@ -23,9 +24,9 @@
     <div class="columns">
         <div class="column">
             <div class="card">
-                <p class="card-header-title is-size-2" id="startedHeader">Your order has started</p>
+                <p class="card-header-title is-size-2 is-invisible" id="startedHeader">Your order has started</p>
             </div>
-            <div class="card-content has-background-success-dark" id="startedContent">
+            <div class="card-content has-background-info" id="startedContent">
                 <div class="content">
                     <i class="fas fa-pizza-slice fa-10x" style="color:red"></i>
                 </div>
@@ -33,17 +34,17 @@
         </div>
         <div class="column is-info">
             <div class="card">
-            <p class="card-header-title is-size-2" id="ovenHeader">Your order is in the oven</p>
+            <p class="card-header-title is-size-2 is-invisible" id="ovenHeader">Your order is in the oven</p>
                 </div>
-                <div class="card-content has-background-danger-dark" id="ovenContent">
+                <div class="card-content has-background-info" id="ovenContent">
                     <div class="content">
-                        <i class="fas fa-fire fa-10x"style="color:blue"></i>
+                        <i class="fas fa-fire fa-10x"style="color:red"></i>
                     </div>
                 </div>
         </div>
         <div class="column is-info">
             <div class="card">
-            <p class="card-header-title is-size-2"id="boxingHeader">Boxing your pizza </p>
+            <p class="card-header-title is-size-2 is-invisible"id="boxingHeader">Boxing your pizza </p>
         </div>
         <div class="card-content has-background-info"id="boxingId">
             <div class="content">
@@ -53,7 +54,7 @@
         </div>
         <div class="column is-info">
             <div class="card">
-            <p class="card-header-title is-size-2"id="deliveryHeader">Out for delivery </p>
+            <p class="card-header-title is-size-2 is-invisible"id="deliveryHeader">Pizza out for delivery </p>
         </div>
         <div class="card-content has-background-info" id="deliveryContent">
             <div class="content">
@@ -62,6 +63,24 @@
         </div>
         </div>
     </div>
+    <div class="columns">
+        <div class="column is-full has-text-centered">
+            <h1 class="is-size-1 is-invisible">Order Complete!!</h1>
+        </div>
+    </div>
 </body>
+<footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+      </p>
+      <p>Photo by Eneida Nieves from Pexels</p>
+      <p>
+        <strong><a href="place holder">APIs</a> / <a href="place holder">Employees</a></strong>
+    </p>
+    </div>
+  </footer>
 
 </html>

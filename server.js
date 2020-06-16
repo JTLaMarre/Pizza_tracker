@@ -34,8 +34,8 @@ app.use(passport.session());
 
 // Routes
 // =============================================================
-require("./routes/html_routes.js")(app);
-//require("./routes/api_routes.js")(app);
+require("./controlers/html_routes.js")(app);
+require("./controlers/api_routes.js")(app);
 
 // Starts the server to begin listening
 // =============================================================

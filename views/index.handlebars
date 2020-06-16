@@ -1,0 +1,48 @@
+{{!-- Pizza's to edit dropdown menu --}}
+<div class="dropdown is-hoverable">
+                <div class="dropdown-trigger">
+                    <button class="button is-rounded is-dark" aria-haspopup="true" aria-controls="dropdown-menu">
+                        <span>Pizza Orders</span>
+                        <span class="icon is-small">
+                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                    {{#each pizza}}
+                    <div class="dropdown-content">
+                        <a href="/employee/:id" class="dropdown-item">
+                        Pizza ID: {{id}}
+                        </a>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+ {{!-- Current pizza status --}}
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
+                            <button class="button is-rounded is-dark" aria-haspopup="true" aria-controls="dropdown-menu">
+                                <span>Pizza Status</span>
+                                <span class="icon is-small">
+                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <a href="#" class="dropdown-item">
+                                    Starting
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    Baking
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    Boxing
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    Deliverying
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+{{!-- Current Pizza Status --}}

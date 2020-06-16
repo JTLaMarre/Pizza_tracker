@@ -1,5 +1,5 @@
-.bg-img { 
-    background-image: url("assets/images/baked-pizza.jpg") ;
+.hero-image { 
+    background-image: url(...assets/images/neon-pizza.jpg) ;
     background-position: center center;
     background-repeat:  no-repeat;
     background-attachment: fixed;

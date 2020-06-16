@@ -1,165 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-    
-    <title>Pizza</title>
-</head>
-<body>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+
+  <title>Pizza</title>
+</head>
+
+<body>
+<!--hero-->
   <section class="hero is-info is-bold has-text-centered">
     <div class="hero-body">
-        <div class="container ">
-            <h1 class="title is-size-1">
-              Build your pizza!
-            </h1>
-            <h2>pizza tracker</h2>
-        </div>
-    </div>
-</section>
-<br>
-
-<!-- crust dropdown-->
-<div class="columns is-centered">
-
-<div class="column is-2">
-  <div class="field">
-    <div class="control">
-      <div class="select is-rounded is-focused is-danger">
-        <select>
-          <option>Crust</option>
-          <option>Thin crust</option>
-          <option>Pan</option>
-          <option>Traditional</option>
-          <option>Deep dish</option>
-
-        </select>
+      <div class="container ">
+        <h1 class="title is-size-1">
+          Build your pizza!
+        </h1>
+        <h2>pizza tracker</h2>
       </div>
     </div>
-  </div>
-  </div>
+  </section>
   <br>
 
-<!-- Sauce dropdown-->
+  <!-- crust dropdown-->
 
-<div class="column is-2">
-<div class="field">
-  <div class="control">
-    <div class="select is-rounded is-focused is-danger">
-      <select>
-        <option>Sauce</option>
-        <option>No sauce</option>
-        <option>Light sauce</option>
-        <option>Normal</option>
-        <option>Extra sauce</option>
-      </select>
+  <div class="tile is-ancestor">
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+
+        <div class="columns is-centered">
+
+          <div class="column is-2">
+            <div class="field">
+              <div class="control">
+                <div class="select is-rounded is-focused is-danger">
+                  <select>
+                    <option>Crust</option>
+                    <option>Thin crust</option>
+                    <option>Pan</option>
+                    <option>Traditional</option>
+                    <option>Deep dish</option>
+
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <!-- Sauce dropdown-->
+
+
+          <div class="column is-2">
+            <div class="field">
+              <div class="control">
+                <div class="select is-rounded is-focused is-danger">
+                  <select>
+                    <option>Sauce</option>
+                    <option>No sauce</option>
+                    <option>Light sauce</option>
+                    <option>Normal</option>
+                    <option>Extra sauce</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <!-- cheese dropdown-->
+          <div class="column is-2">
+            <div class="field">
+              <div class="control">
+                <div class="select is-rounded is-danger">
+                  <select>
+                    <option>Cheese</option>
+                    <option>No cheese</option>
+                    <option>Light cheese</option>
+                    <option>Normal</option>
+                    <option>Extra cheese</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <!-- topping 1 dropdown-->
+          <div class="column is-2">
+            <div class="field">
+              <div class="control">
+                <div class="select is-rounded is-danger">
+                  <select>
+                    <option>Topping 1</option>
+                    <option>Pepperoni</option>
+                    <option>Sausage</option>
+                    <option>Chicken</option>
+                    <option>Beef</option>
+                    <option>Pepers</option>
+                    <option>Onions</option>
+                    <option>Olives</option>
+                    <option>Mushrooms</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <!--topping 2 dropdown-->
+          <div class="column is-2">
+            <div class="field">
+              <div class="control">
+                <div class="select is-rounded is-danger">
+                  <select>
+                    <option>Topping 1</option>
+                    <option>Pepperoni</option>
+                    <option>Sausage</option>
+                    <option>Chicken</option>
+                    <option>Beef</option>
+                    <option>Pepers</option>
+                    <option>Onions</option>
+                    <option>Olives</option>
+                    <option>Mushrooms</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+      </article>
     </div>
   </div>
-</div>
-</div>
-<br>
-
-<!-- cheese dropdown-->
-<div class="column is-2">
-<div class="field">
-  <div class="control">
-    <div class="select is-rounded is-danger">
-      <select>
-        <option>Cheese</option>
-        <option>No cheese</option>
-        <option>Light cheese</option>
-        <option>Normal</option>
-        <option>Extra cheese</option>
-      </select>
-    </div>
+  <br>
   </div>
-</div>
-</div>
-<br>
-
-<!-- topping 1 dropdown-->
-<div class="column is-2">
-      <div class="field">
-        <div class="control">
-          <div class="select is-rounded is-danger">
-            <select>
-              <option>Topping 1</option>
-              <option>Pepperoni</option>
-              <option>Sausage</option>
-              <option>Chicken</option>
-              <option>Beef</option>
-              <option>Pepers</option>
-              <option>Onions</option>
-              <option>Olives</option>
-              <option>Mushrooms</option>
-            </select>
-          </div>
-        </div>
-      </div>
-    </div>
-<br>
-
-<!--topping 2 dropdown-->
-<div class="column is-2">
-      <div class="field">
-        <div class="control">
-          <div class="select is-rounded is-danger">
-            <select>
-              <option>Topping 1</option>
-              <option>Pepperoni</option>
-              <option>Sausage</option>
-              <option>Chicken</option>
-              <option>Beef</option>
-              <option>Pepers</option>
-              <option>Onions</option>
-              <option>Olives</option>
-              <option>Mushrooms</option>
-            </select>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br>
-</div>
 
   <!-- special requests-->
-<div class="tile is-ancestor">
+  <div class="tile is-ancestor">
 
     <div class="tile is-parent"></div>
 
     <div class="tile is-parent">
-      <div class="tile is-child">
+      <div class="tile is-child box">
         <div class="field is-vertical is-4 is-centered">
           <div class="control">
             <textarea class="textarea is-small is-danger" placeholder="Special-requests"></textarea>
           </div>
         </div>
-          </div>
       </div>
+    </div>
 
-        <div class="tile is-parent"></div>
-        
+    <div class="tile is-parent"></div>
+
   </div>
 
-<!--loading bar-->
-<progress class="progress is-small is-danger" max="25">15%</progress>
 
-
-<br>
-<footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-      <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-    </p>
-    <p>
-      <strong><a href="place holder">APIs</a> / <a href="place holder">Employees</a></strong>
-  </p>
+  <!--Track button-->
+  <div class="tile is-ancestor is-centered">
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <p>
+          <button class="button is-danger is-outlined">
+            <span>track</span>
+            <span class="icon is-small">
+              <i class="fas fa-clock"></i>
+            </span>
+          </button>
+        </p>
+        <div class="content">
+          <p>Track the deliciousness</p>
+        </div>
+      </article>
+    </div>
+    <!--Employees button-->
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <p>
+          <button class="button is-danger is-outlined">
+            <span>employees</span>
+            <span class="icon is-small">
+              <i class="fas fa-door-open"></i>
+            </span>
+          </button>
+        </p>
+        <div class="content">
+          <p>Employee log-in portal</p>
+        </div>
+      </article>
+    </div>
   </div>
-</footer>
+
+  <br>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+      </p>
+      <p>
+        <strong><a href="place holder">APIs</a> / <a href="place holder">Employees</a></strong>
+      </p>
+    </div>
+  </footer>
 </body>
+
 </html>

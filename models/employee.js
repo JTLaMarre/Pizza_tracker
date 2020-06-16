@@ -14,6 +14,15 @@ module.exports = function(sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    // First name and Last name for employee database, though only the first name should be used by the tracker display
+    first_name:
+    {
+      type: DataTypes.STRING,
+    },
+    last_name:
+    {
+      type: DataTypes.STRING,
     }
   });
 
@@ -24,7 +33,7 @@ module.exports = function(sequelize, DataTypes) {
   // Hooks are automatic methods that run during various phases of the Employee Model lifecycle
   // In this case, before a Employee is created, we will automatically hash their password
   Employee.addHook("beforeCreate", function(employee) {
-    employee.password = bcrypt.hashSync(Employe.password, bcrypt.genSaltSync(10), null);
+    employee.password = bcrypt.hashSync(Employee.password, bcrypt.genSaltSync(10), null);
   });
-  return Employe;
+  return Employee;
 };

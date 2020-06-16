@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
     const Pizza = sequelize.define("Pizza", {
         id: {
-            type: DataTypes.INGETER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             autoIncrement: true,
             primaryKey: true
@@ -58,4 +58,5 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.INTEGER
         }
     })
+    return Pizza;
 }

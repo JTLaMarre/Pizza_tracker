@@ -4,15 +4,13 @@ var fs        = require('fs');
 var path      = require('path');
 var Sequelize = require('sequelize');
 var basename  = path.basename(module.filename);
-var env       = process.env.NODE_ENV || 'development';
-var config    = require(__dirname + '/../config/config.json')[env];
 var db        = {};
 
 if (process.env.JAWSDB_URL) {
-    sequelize = new Sequelize(process.env.JAWSDB_URL);
+    var sequelize = new Sequelize(process.env.JAWSDB_URL);
 }
 else {
-    sequelize = new Sequelize("pizza_tracker_db", "root", "rootroot", {
+    var sequelize = new Sequelize("pizza_tracker_db", "root", "rootroot", {
         host: "localhost",
         port: 3306,
         dialect: "mysql",

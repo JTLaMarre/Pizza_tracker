@@ -1,6 +1,5 @@
 const db = require("../models");
 const passport = require("../config/passport")
-const shortId = require("shortid")
 
 module.exports = function(app) {
 
@@ -10,18 +9,18 @@ app.post("/api/login", passport.authenticate("local"), function(req, res) {
 })
 
 app.post("/api/signup", function(req, res) {
-    let employeeId = shortId.generate();
-    console.log(employeeId);
+  console.log(req.body)
     db.Employee.create({
-        id: employeeId,
         password: req.body.password,
         first_name: req.body.first_name,
         last_name: req.body.last_name
     })
-    .then(() => {
-        res.json(307, "/api/login");
+    .then((createdEmployee) => {
+        console.log(createdEmployee)
+        res.status(307).json("/api/login");
     })
     .catch((err) => {
+        console.log(err)
         res.status(401).json(err);
     });
 });

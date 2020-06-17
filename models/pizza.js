@@ -26,42 +26,16 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             defaultValue: "None"
         },
-        started_status: {
-            type: DataTypes.STRING,
-            defaultValue: "incomplete"
+        status: {
+            type: DataTypes.INTEGER,
+            defaultValue: 0
         },
-        started_employee: {
+        cooking_employee: {
             type: DataTypes.INTEGER,
             references: {
                 model: "employees",
                 key: 'id'
             }
-        },
-        oven_status: {
-            type: DataTypes.STRING,
-            defaultValue: "incomplete"
-        },
-        oven_employee: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: "employees",
-                key: 'id'
-            }
-        },
-        box_status: {
-            type: DataTypes.STRING,
-            defaultValue: "incomplete"
-        },
-        box_employee: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: "employees",
-                key: 'id'
-            }
-        },
-        delivery_status: {
-            type: DataTypes.STRING,
-            defaultValue: "incomplete"
         },
         delivery_employee: {
             type: DataTypes.INTEGER,

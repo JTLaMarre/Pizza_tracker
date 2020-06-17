@@ -1,56 +1,72 @@
 <section class="hero is-dark has-text-centered">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title is-size-1">Pizza Management</h1>
-                <i class="fas fa-pizza-slice fa-5x" style="color: white"></i>
-            </div>
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title is-size-1">Pizza Management</h1>
+            <i class="fas fa-pizza-slice fa-5x" style="color: white"></i>
         </div>
-    </section>
-{{!-- Pizza's to edit dropdown menu --}}
-<div class="dropdown is-hoverable">
+    </div>
+</section>
+<br>
+<div class="columns">
+    <div class="column is-one-quarter">
+    </div>
+    {{!-- Pizza's to edit dropdown menu --}}
+    <div class="dropdown is-hoverable">
+        <div class="dropdown-trigger">
+            <button class="button is-rounded is-dark" aria-haspopup="true" aria-controls="dropdown-menu">
+                <span>Pizza Orders</span>
+                <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+            </button>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+            {{#each pizza}}
+            <div class="dropdown-content">
+                <a href="/employee/:id" class="dropdown-item pizza" data-id="{{id}}">
+                    Pizza ID: {{id}}
+                </a>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+    {{!-- Current pizza status --}}
+    <div class="column is-one-quarter">
+        <div class="box">
+            <p>
+                <strong id="pizzaId"> Pizza ID</strong>
+            </p>
+            <p>
+                <strong id="pizzaStatus"> Pizza Status</strong>
+            </p>
+            <div class="dropdown is-hoverable">
                 <div class="dropdown-trigger">
                     <button class="button is-rounded is-dark" aria-haspopup="true" aria-controls="dropdown-menu">
-                        <span>Pizza Orders</span>
+                        <span>Pizza Status</span>
                         <span class="icon is-small">
                             <i class="fas fa-angle-down" aria-hidden="true"></i>
                         </span>
                     </button>
                 </div>
                 <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                    {{#each pizza}}
-                    <div class="dropdown-content">
-                        <a href="/employee/:id" class="dropdown-item">
-                        Pizza ID: {{id}}
+                    <div class="dropdown-content status">
+                        <a href="#" class="dropdown-item" data-stat="starting">
+                            Starting
+                        </a>
+                        <a href="#" class="dropdown-item status"data-stat="baking">
+                            Baking
+                        </a>
+                        <a href="#" class="dropdown-item status"data-stat="boxing">
+                            Boxing
+                        </a>
+                        <a href="#" class="dropdown-item status"data-stat="deliverying">
+                            Deliverying
                         </a>
                     </div>
-                    {{/each}}
                 </div>
             </div>
- {{!-- Current pizza status --}}
-                    <div class="dropdown is-hoverable">
-                        <div class="dropdown-trigger">
-                            <button class="button is-rounded is-dark" aria-haspopup="true" aria-controls="dropdown-menu">
-                                <span>Pizza Status</span>
-                                <span class="icon is-small">
-                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                </span>
-                            </button>
-                        </div>
-                        <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                            <div class="dropdown-content">
-                                <a href="#" class="dropdown-item">
-                                    Starting
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    Baking
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    Boxing
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    Deliverying
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+        </div>
+    </div>
+</div>
 {{!-- Current Pizza Status --}}

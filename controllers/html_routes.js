@@ -35,7 +35,7 @@ module.exports = function(app) {
     if (req.employee) {
         res.redirect("/employee/pizza_status");
     }
-    res.render('signup');
+    res.render('newEmployee');
   })
 
 };

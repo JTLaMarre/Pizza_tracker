@@ -1,48 +1,155 @@
-{{!-- Pizza's to edit dropdown menu --}}
-<div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
-                    <button class="button is-rounded is-dark" aria-haspopup="true" aria-controls="dropdown-menu">
-                        <span>Pizza Orders</span>
-                        <span class="icon is-small">
-                            <i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </span>
-                    </button>
-                </div>
-                <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                    {{#each pizza}}
-                    <div class="dropdown-content">
-                        <a href="/employee/:id" class="dropdown-item">
-                        Pizza ID: {{id}}
-                        </a>
-                    </div>
-                    {{/each}}
-                </div>
-            </div>
- {{!-- Current pizza status --}}
-                    <div class="dropdown is-hoverable">
-                        <div class="dropdown-trigger">
-                            <button class="button is-rounded is-dark" aria-haspopup="true" aria-controls="dropdown-menu">
-                                <span>Pizza Status</span>
-                                <span class="icon is-small">
-                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                </span>
-                            </button>
-                        </div>
-                        <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                            <div class="dropdown-content">
-                                <a href="#" class="dropdown-item">
-                                    Starting
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    Baking
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    Boxing
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    Deliverying
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-{{!-- Current Pizza Status --}}
+ {{!-- <!-- sweet hero with pizza inside --> --}}
+  <section class="hero is-bold is-fullheight has-text-centered has-bg-img">
+    <div class="hero-body">
+      <div class="container ">
+        <h1 class="title is-size-1 has-text-white">
+          Lets build a pizza!
+        </h1>
+        <h2 class="has-text-white">and track with pizza tracker</h2>
+      </div>
+    </div>
+  </section>
+  <br>
+  {{!-- <!-- dropdowns row --> --}}
+  <div class="columns">
+    {{!-- <!-- crust dropdown--> --}}
+    <div class="column is-2">
+      <div class="field">
+        <div class="control">
+          <div class="select is-rounded is-focused is-danger">
+            <select>
+              <option>Crust</option>
+              <option>Thin crust</option>
+              <option>Pan</option>
+              <option>Traditional</option>
+              <option>Deep dish</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    {{!-- <!-- Sauce dropdown--> --}}
+    <div class="column is-2">
+      <div class="field">
+        <div class="control">
+          <div class="select is-rounded is-focused is-danger">
+            <select>
+              <option>Sauce</option>
+              <option>No sauce</option>
+              <option>Light sauce</option>
+              <option>Normal</option>
+              <option>Extra sauce</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    {{!-- <!-- cheese dropdown--> --}}
+    <div class="column is-2">
+      <div class="field">
+        <div class="control">
+          <div class="select is-rounded is-danger">
+            <select>
+              <option>Cheese</option>
+              <option>No cheese</option>
+              <option>Light cheese</option>
+              <option>Normal</option>
+              <option>Extra cheese</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    {{!-- <!-- topping 1 dropdown--> --}}
+    <div class="column is-2">
+      <div class="field">
+        <div class="control">
+          <div class="select is-rounded is-danger">
+            <select>
+              <option>Choose 1</option>
+              <option>Pepperoni</option>
+              <option>Sausage</option>
+              <option>Chicken</option>
+              <option>Beef</option>
+              <option>Pepers</option>
+              <option>Onions</option>
+              <option>Olives</option>
+              <option>Mushrooms</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    {{!-- <!--topping 2 dropdown--> --}}
+    <div class="column is-2">
+      <div class="field">
+        <div class="control">
+          <div class="select is-rounded is-danger">
+            <select>
+              <option>Choose 1</option>
+              <option>Pepperoni</option>
+              <option>Sausage</option>
+              <option>Chicken</option>
+              <option>Beef</option>
+              <option>Pepers</option>
+              <option>Onions</option>
+              <option>Olives</option>
+              <option>Mushrooms</option>
+            </select>
+          </div>
+          <br>
+          </article>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+  {{!-- <!-- special request row --> --}}
+  <div class="columns">
+    <div class="column is-one-quarter"></div>
+    <div class="column is-half">
+      <Label class="label">Special request</Label>
+      <textarea class="textarea is-danger" placeholder="Special Requests"></textarea>
+      <div class="control">
+        <button class="button is-danger">Submit</button>
+      </div>
+    </div>
+    <div class="column is-one-quarter"></div>
+  </div>
+  {{!-- <!-- track and employee portal row --> --}}
+  <div class="columns">
+    <div class="column is-one-quarter"></div>
+    <div class="column is-one-quarter">
+      {{!-- <!-- track button --> --}}
+      <p>
+        <button class="button is-danger is-outlined">
+          <span>track</span>
+          <span class="icon is-small">
+            <i class="fas fa-clock"></i>
+          </span>
+        </button>
+      </p>
+      <div class="content">
+        <p>Track the deliciousness</p>
+      </div>
+    </div>
+    <div class="column is-one-quarter">
+      {{!-- <!-- employee portal button --> --}}
+      <p>
+        <button class="button is-danger is-outlined">
+          <span>employees</span>
+          <span class="icon is-small">
+            <i class="fas fa-door-open"></i>
+          </span>
+        </button>
+      </p>
+      <div class="content">
+        <p>Employee log-in portal</p>
+      </div>
+    </div>
+    <div class="column is-one-quarter"></div>
+  </div>

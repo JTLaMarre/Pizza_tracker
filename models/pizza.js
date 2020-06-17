@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
     const Pizza = sequelize.define("Pizza", {
         id: {
-            type: DataTypes.INGETER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             autoIncrement: true,
             primaryKey: true
@@ -31,31 +31,49 @@ module.exports = function(sequelize, DataTypes) {
             defaultValue: "incomplete"
         },
         started_employee: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER,
+            references: {
+                model: "Employee",
+                key: 'id'
+            }
         },
         oven_status: {
             type: DataTypes.STRING,
             defaultValue: "incomplete"
         },
         oven_employee: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER,
+            references: {
+                model: "Employee",
+                key: 'id'
+            }
         },
         box_status: {
             type: DataTypes.STRING,
             defaultValue: "incomplete"
         },
         box_employee: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER,
+            references: {
+                model: "Employee",
+                key: 'id'
+            }
         },
         delivery_status: {
             type: DataTypes.STRING,
             defaultValue: "incomplete"
         },
         delivery_employee: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER,
+            references: {
+                model: "Employee",
+                key: 'id'
+            }
         },
         phone_number: {
             type: DataTypes.INTEGER
         }
     })
+    
+    return Pizza;
 }

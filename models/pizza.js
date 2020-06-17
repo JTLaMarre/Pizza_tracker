@@ -71,7 +71,7 @@ module.exports = function(sequelize, DataTypes) {
             }
         },
         phone_number: {
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING
         }
     })
     

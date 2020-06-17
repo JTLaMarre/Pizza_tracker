@@ -33,7 +33,7 @@ module.exports = function(sequelize, DataTypes) {
         started_employee: {
             type: DataTypes.INTEGER,
             references: {
-                model: "Employee",
+                model: "employees",
                 key: 'id'
             }
         },
@@ -44,7 +44,7 @@ module.exports = function(sequelize, DataTypes) {
         oven_employee: {
             type: DataTypes.INTEGER,
             references: {
-                model: "Employee",
+                model: "employees",
                 key: 'id'
             }
         },
@@ -55,7 +55,7 @@ module.exports = function(sequelize, DataTypes) {
         box_employee: {
             type: DataTypes.INTEGER,
             references: {
-                model: "Employee",
+                model: "employees",
                 key: 'id'
             }
         },
@@ -66,7 +66,7 @@ module.exports = function(sequelize, DataTypes) {
         delivery_employee: {
             type: DataTypes.INTEGER,
             references: {
-                model: "Employee",
+                model: "employees",
                 key: 'id'
             }
         },

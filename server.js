@@ -14,8 +14,8 @@ var db = require("./models");
 
 // Sets up the Express App
 // =============================================================
-var app = express();
-var PORT = process.env.PORT || 8088;
+const app = express();
+const PORT = process.env.PORT || 8088;
 
 // Sets up the Express app to handle data parsing
 // =============================================================
@@ -32,14 +32,20 @@ app.use(session({ secret: process.env.SESSION_SECRET || "keyboard cat", resave: 
 app.use(passport.initialize());
 app.use(passport.session());
 
+// express handle bars setup 
+// =============================================================
+const exphbs = require("express-handlebars");
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 // Routes
 // =============================================================
-require("./controlers/html_routes.js")(app);
-require("./controlers/api_routes.js")(app);
+require("./controllers/html_routes.js")(app);
+require("./controllers/api_routes.js")(app);
 
 // Starts the server to begin listening
 // =============================================================
-db.sequelize.sync().then(function() {
+db.sequelize.sync({force: true}).then(function() {
     app.listen(PORT, function() {
         console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
     });

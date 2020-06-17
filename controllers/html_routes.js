@@ -7,17 +7,20 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 module.exports = function(app) {
 
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/buildPizza.html"));
+    res.render("index")
   });
 
   app.get("/tracker", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/Tracker.html"));
+    res.render('tracker');
   });
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a employee who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/employee/pizza_status", isAuthenticated, function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/employeePizzaManagement.html"));
+    if (!req.employee){
+      res.redirect('/')
+    }
+    res.render('pizzaManage')
   });
 
   app.get("/employee/login", function(req, res) {
@@ -25,14 +28,14 @@ module.exports = function(app) {
     if (req.employee) {
       res.redirect("/employee/pizza_status");
     }
-    res.sendFile(path.join(__dirname, "../public/login.html"));
+    res.render('login');
   });
 
   app.get("/employee/signup", function(req, res) {
     if (req.employee) {
         res.redirect("/employee/pizza_status");
     }
-    res.sendFile(path.join(__dirname, "../public/signup.html"))
+    res.render('signup');
   })
 
 };

@@ -1,0 +1,58 @@
+   <section class="hero is-fullheight has-bg-img is-bold has-text-centered">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-size-1 has-text-white">
+                    Let's Track Your Pizza
+                </h1>
+            </div>
+        </div>
+    </section>
+    {{!-- row for different tracking statuses --}}
+    <div class="columns">
+        <div class="column">
+            <div class="card">
+                <p class="card-header-title is-size-2 is-invisible" id="startedHeader">Your order has started</p>
+            </div>
+            <div class="card-content has-background-info" id="startedContent">
+                <div class="content">
+                    <i class="fas fa-pizza-slice fa-10x" style="color:red"></i>
+                </div>
+            </div>
+        </div>
+        <div class="column is-info">
+            <div class="card">
+            <p class="card-header-title is-size-2 is-invisible" id="ovenHeader">Your order is in the oven</p>
+                </div>
+                <div class="card-content has-background-info" id="ovenContent">
+                    <div class="content">
+                        <i class="fas fa-fire fa-10x"style="color:red"></i>
+                    </div>
+                </div>
+        </div>
+        <div class="column is-info">
+            <div class="card">
+            <p class="card-header-title is-size-2 is-invisible"id="boxingHeader">Boxing your pizza </p>
+        </div>
+        <div class="card-content has-background-info"id="boxingId">
+            <div class="content">
+                <i class="fas fa-box fa-10x"style="color:red"></i>
+            </div>
+        </div>
+        </div>
+        <div class="column is-info">
+            <div class="card">
+            <p class="card-header-title is-size-2 is-invisible"id="deliveryHeader">Pizza out for delivery </p>
+        </div>
+        <div class="card-content has-background-info" id="deliveryContent">
+            <div class="content">
+                <i class="fas fa-car-side fa-10x"style="color:red"></i>
+            </div>
+        </div>
+        </div>
+    </div>
+    {{!-- row for order complete --}}
+    <div class="columns">
+        <div class="column is-full has-text-centered">
+            <h1 class="is-size-1 is-invisible">Order Complete!!</h1>
+        </div>
+    </div>

@@ -25,6 +25,9 @@ let newPizza = {
     phone_number:phone
 } 
 $.post("/api/pizza", newPizza)
+.then((data)=>{
+    alert("your odrer number is "+data.id+" use this to track your pizza!")
+})
 
 })
 // make sure the track and employee portal buttons redirect using our html routes

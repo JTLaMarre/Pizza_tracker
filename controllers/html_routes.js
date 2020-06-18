@@ -17,8 +17,8 @@ module.exports = function(app) {
   // Here we've add our isAuthenticated middleware to this route.
   // If a employee who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/employee/pizza_status", isAuthenticated, function(req, res) {
-    if (!req.employee){
-      res.redirect('/employee/login')
+    if (!req.user){
+     return res.redirect('/employee/login')
     }
     res.render('pizzaManage')
   });

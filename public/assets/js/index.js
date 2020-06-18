@@ -7,6 +7,7 @@ let topping2 ="";
 let phone ="";
 
 
+
 $("#submit").click(()=>{
 crust = $("#crust").val()
 sauce = $("#sauce").val()
@@ -24,9 +25,13 @@ let newPizza = {
     phone_number:phone
 } 
 $.post("/api/pizza", newPizza)
+.then((data)=>{
+    alert("your odrer number is "+data.id+" use this to track your pizza!")
+})
 
 })
 // make sure the track and employee portal buttons redirect using our html routes
+<<<<<<< HEAD
 $("#track").on("click", ()=>{
     console.log("click")
     window.location.replace("/tracker");
@@ -36,4 +41,15 @@ $("#track").on("click", ()=>{
 $("#employee").on("click", ()=>{
     console.log("click")
     window.location.replace("/employee/login");
+=======
+$("#track").click(()=>{
+    window.location.href = "/tracker"
+    
+    
+})
+
+// employee portal button
+$("#employee").click(()=>{
+    window.location.href = "/employee/login"
+>>>>>>> a58574b1e2c4a92ab1cc5d11083c01373caac3b6
 })

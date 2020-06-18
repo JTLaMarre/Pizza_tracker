@@ -6,7 +6,8 @@ module.exports = function(app) {
 
 
 app.post("/api/login", passport.authenticate("local"), function(req, res) {
-    res.json(req.employee)
+
+    res.json(req.user)
 })
 
 app.post("/api/signup", function(req, res) {
@@ -54,7 +55,7 @@ app.post("/api/pizza", function(req, res) {
         phone_number: req.body.phone_number
     }).then((newPizza) => {
         console.log(newPizza)
-        res.status(500).json(newPizza)
+        res.json(newPizza)
     }).catch((err) =>{
         res.status(401).json(err)
     })

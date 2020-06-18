@@ -26,6 +26,7 @@ passport.use(new LocalStrategy(
         });
       }
       // If none of the above, return the user
+      console.log('user logged in', dbEmployee)
       return done(null, dbEmployee);
     });
   }

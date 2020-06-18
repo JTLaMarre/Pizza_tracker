@@ -27,7 +27,8 @@ $(document).ready(function() {
         $.post("/api/login", {
             employee_id: employee_id,
             password: password
-        }).then(function() {
+        }).then(function(data) {
+            console.log(data)
             window.location.replace("/employee/pizza_status");
         }).catch(function(err) {
             console.log(err);

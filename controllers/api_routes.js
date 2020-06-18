@@ -63,8 +63,8 @@ app.get("/api/pizza/active", function(req, res) {
     db.Pizza.findAll({
         attributes: ["id"],
         where: {
-            delivery_status: {
-                [Op.ne]: "complete"
+            status: {
+                [Op.lt]: 5
             }
         }
     }).then(pizzas => {
@@ -81,4 +81,15 @@ app.get("/api/pizza/:id", function(req, res) {
         res.json(pizzaData)
     })
 });
+
+app.get("api/pizza/customer/:phone_number", function(req, res) {
+    db.Pizza.findAll({
+        where: {
+            phone_number: req.params.phone_number
+        }
+    }).then(pizzaData => {
+        res.json(pizzaData)
+    })
+})
+
 }

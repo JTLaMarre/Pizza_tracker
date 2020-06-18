@@ -1,6 +1,6 @@
-const submitEmp = $("#submitEmp");
+// const submitEmp = $("#submitEmp");
 
-submitEmp.on("click", function (event) {
+$("#submitEmp").on("click", function (event) {
     let firstName = $("#first_name").val().trim();
     let lastName = $("#last_name").val().trim();
     let newPassword = $("#newPassword").val().trim();

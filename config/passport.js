@@ -8,9 +8,14 @@ passport.use(new LocalStrategy(
 
   function(id, password, done) {
     // When a user tries to sign in this code runs
+
+    {
+      usernameField: "employee_id"
+    }
+
     db.Employee.findOne({
       where: {
-        id: id
+        employee_id: employee_id
       }
     }).then(function(dbEmployee) {
       // If there's no user with the given login

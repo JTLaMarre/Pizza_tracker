@@ -4,6 +4,7 @@ let sauce ="";
 let cheese ="";
 let topping1 ="";
 let topping2 ="";
+let phone ="";
 
 
 $("#submit").click(()=>{
@@ -12,11 +13,25 @@ sauce = $("#sauce").val()
 cheese = $("#cheese").val()
 topping1 = $("#topping1").val()
 topping2 = $("#topping2").val()
-console.log(crust,sauce,cheese,topping1,topping2)
+phone = $("#phone").val()
+console.log(crust,sauce,cheese,topping1,topping2,phone)
+let newPizza = {
+    crust_type: crust,
+    sauce_type: sauce,
+    cheese_type: cheese,
+    topping1:topping1,
+    topping2:topping2,
+    phone_number:phone
+} 
+$.post("/api/pizza", newPizza)
+
 })
-// make sure special request is working correctly
+// make sure the track and employee portal buttons redirect using our html routes
+$("#track").click(()=>{
+    $.get("/tracker");
+})
 
-// make sure submit button takes the info from the dropdowns and special request
-
-// make sure the trach and employee portal buttons redirect using our html routes
-
+// employee portal button
+$("#employee").click(()=>{
+    $.get("/employee/login");
+})

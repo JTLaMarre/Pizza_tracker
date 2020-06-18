@@ -33,5 +33,5 @@ $("#track").click(()=>{
 
 // employee portal button
 $("#employee").click(()=>{
-    $.get("/employee_login");
+    $.get("/employee/login");
 })

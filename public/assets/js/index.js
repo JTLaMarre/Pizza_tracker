@@ -1,19 +1,16 @@
 // make sure drop down options are selecting correctly
+try{
+    require('./index.handlebars')
+  }catch(e){
+    console.log(e.stack)
+  }
+
 function myFunction(crust) {
-   var x = document.getElementById("crustType").value;
-   document.getElementById("crustType").innerHTML = x;
-   
-    if (crust === "Thin crust") {
-        setCrustType("Thin crust");
-    }else if (crust === "Pan") {
-        setCrustType("Pan");
-    }else if (crust === "Traditional") {
-        setCrustType("Traditional");
-    }else if (crust === "Deep Dish") {
-        setCrustType("Deep dish");
-    }
-  console.log(crust)
+    var crust = crustType[''];
+    var x = document.getElementById("crustType").value;
+  
 }
+console.log(crustType)
 myFunction()
 // make sure special request is working correctly
 

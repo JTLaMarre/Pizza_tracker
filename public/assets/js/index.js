@@ -4,6 +4,7 @@ let sauce ="";
 let cheese ="";
 let topping1 ="";
 let topping2 ="";
+let phone ="";
 
 
 $("#submit").click(()=>{
@@ -12,7 +13,8 @@ sauce = $("#sauce").val()
 cheese = $("#cheese").val()
 topping1 = $("#topping1").val()
 topping2 = $("#topping2").val()
-console.log(crust,sauce,cheese,topping1,topping2)
+phone = $("#phone").val()
+console.log(crust,sauce,cheese,topping1,topping2,phone)
 })
 // make sure special request is working correctly
 

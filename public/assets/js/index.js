@@ -1,3 +1,5 @@
+import { response } from "express";
+
 // make sure drop down options are selecting correctly
 let crust ="";
 let sauce ="";
@@ -13,6 +15,13 @@ cheese = $("#cheese").val()
 topping1 = $("#topping1").val()
 topping2 = $("#topping2").val()
 console.log(crust,sauce,cheese,topping1,topping2)
+
+$.ajax(
+    {
+        url: "/api/employee_data"+currentPizza,
+        method: GET
+    }.then(response)
+
 })
 // make sure special request is working correctly
 

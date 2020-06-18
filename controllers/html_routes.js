@@ -18,7 +18,7 @@ module.exports = function(app) {
   // If a employee who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/employee/pizza_status", isAuthenticated, function(req, res) {
     if (!req.employee){
-      res.redirect('/')
+      res.redirect('/employee/login')
     }
     res.render('pizzaManage')
   });

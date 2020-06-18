@@ -27,4 +27,11 @@ $.post("/api/pizza", newPizza)
 
 })
 // make sure the track and employee portal buttons redirect using our html routes
+$("#track").click(()=>{
+    $.get("/tracker");
+})
 
+// employee portal button
+$("#employee").click(()=>{
+    $.get("/employee_login");
+})

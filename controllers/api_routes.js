@@ -10,17 +10,18 @@ app.post("/api/login", passport.authenticate("local"), function(req, res) {
 })
 
 app.post("/api/signup", function(req, res) {
-  console.log(req.body)
+//   console.log(req.body)
     db.Employee.create({
         password: req.body.password,
         first_name: req.body.first_name,
         last_name: req.body.last_name
     })
-    .then((createdEmployee) => {
-        console.log(createdEmployee)
-        res.status(307).json("/api/login");
+    .then((data) => {
+        console.log("Success")
+        res.json(data)
     })
     .catch((err) => {
+        console.log("This is an error")
         console.log(err)
         res.status(401).json(err);
     });

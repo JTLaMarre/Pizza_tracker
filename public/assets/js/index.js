@@ -1,17 +1,19 @@
 // make sure drop down options are selecting correctly
-try{
-    require('./index.handlebars')
-  }catch(e){
-    console.log(e.stack)
-  }
+let crust ="";
+let sauce ="";
+let cheese ="";
+let topping1 ="";
+let topping2 ="";
 
-function myFunction(crust) {
-    var crust = crustType[''];
-    var x = document.getElementById("crustType").value;
-  
-}
-console.log(crustType)
-myFunction()
+
+$("#submit").click(()=>{
+crust = $("#crust").val()
+sauce = $("#sauce").val()
+cheese = $("#cheese").val()
+topping1 = $("#topping1").val()
+topping2 = $("#topping2").val()
+console.log(crust,sauce,cheese,topping1,topping2)
+})
 // make sure special request is working correctly
 
 // make sure submit button takes the info from the dropdowns and special request

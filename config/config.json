@@ -1,7 +1,7 @@
 {
     "development": {
       "username": "root",
-      "password": "Km5405@!",
+      "password": "rootroot",
       "database": "pizza_tracker_db",
       "host": "127.0.0.1",
       "dialect": "mysql"

@@ -16,9 +16,9 @@ app.post("/api/signup", function(req, res) {
         first_name: req.body.first_name,
         last_name: req.body.last_name
     })
-    .then((createdEmployee) => {
-        console.log(createdEmployee)
-        res.redirect(307, "/employee/login");
+    .then((data) => {
+        console.log("Success")
+        res.json(data)
     })
     .catch((err) => {
         console.log("This is an error")

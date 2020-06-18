@@ -59,7 +59,7 @@ app.post("/api/pizza", function(req, res) {
     })
 });
 
-app.get("/api/pizza/active", function(req, res) {
+app.get("/api/pizza/", function(req, res) {
     db.Pizza.findAll({
         attributes: ["id"],
         where: {

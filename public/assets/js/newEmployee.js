@@ -23,9 +23,4 @@ submitEmp.on("submit", function(event) {
     $.post("/api/signup", employeeData)
         .then(data => window.location.replace("/employee/pizza_status"))
 })
-// make sure the employee fields are selected 
-// firstname,lastname
-// make sure the password matches confirmed password if not alert and don't submit
 
-
-// make sure submit button submits the form data to the data base and creates a new Employee

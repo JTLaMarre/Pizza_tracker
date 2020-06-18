@@ -24,16 +24,8 @@ submitEmp.on("click", function (event) {
             .then((data) => {
                 // console.log(data)
                 alert("Your Employee Id is: " + data.employee_id);
-                return $.post("/api/login", {
-                    employee_id: data.employee_id,
-                    first_name: firstName,
-                    last_name: lastName,
-                    password: newPassword,
-                });
+                window.location.replace("/employee/login")
             })
-            .then((loginResults) => {
-                console.log(loginResults);
-            });
     }
 });
 // make sure the employee fields are selected

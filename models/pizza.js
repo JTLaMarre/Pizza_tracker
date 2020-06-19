@@ -30,20 +30,6 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.INTEGER,
             defaultValue: 0
         },
-        cooking_employee: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: "employees",
-                key: 'id'
-            }
-        },
-        delivery_employee: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: "employees",
-                key: 'id'
-            }
-        },
         phone_number: {
             type: DataTypes.STRING
         }

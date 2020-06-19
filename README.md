@@ -27,7 +27,7 @@ in the back end there is a form for employers to add new employees and a sign in
 
 >landing page where customres can create a pizza or navigate to the tracker. Also employes can acces the "employee portal" from here
 
-![pizza builder](assets/images/pizzabuilder.jpg)
+![pizza builder](assets/images/pizzaBuilder.jpg)
 
 >tracker page where customers can look up the status of their pizza with their pizza ID
 

@@ -24,10 +24,10 @@ const getStatus = () => {
         $("#ovenHeader").removeClass("is-invisible")
         break;
         case 3 :
-        $("#boxingdHeader").removeClass("is-invisible")
+        $("#boxingHeader").removeClass("is-invisible")
         break;
         case 4 :
-        $("#deliverydHeader").removeClass("is-invisible")
+        $("#deliveryHeader").removeClass("is-invisible")
         break;
         case 5 :
         $("#complete").removeClass("is-invisible")

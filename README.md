@@ -1,5 +1,10 @@
 # **Pizza Tracker** 
 
+>[GitHub](https://github.com/JTLaMarre/Pizza_tracker)
+
+>[Heroku](https://pizza--tracker.herokuapp.com/)
+
+
 ## Description:
 With the piza tracker app, customers are able to build a pizza of their choice form the drop down choices. they can choose a type of crust, cheese, sauce and up to two toppings. There is also a section for customers to type ther special requests and another for their phone number to track the pizza once it is submited. Once the customer has submited the pizza, they can navigte to the tracker page by clicking on the button anfd there they can see where their pizza is during the process. 
 in the back end there is a form for employers to add new employees and a sign in page for already created employees. once an eployee logs in, he/she can then review the order and manually modify the step in which the customers pizza is at that moment. Wheter if it has been started, baking, boxing or being delivered. 
@@ -35,4 +40,6 @@ in the back end there is a form for employers to add new employees and a sign in
 >employee login form
 
 ![employee login](assets/images/employeeLogin.jpg)
+
+
 

@@ -1,5 +1,7 @@
 // Requiring path to so we can use relative routes to our HTML files
 var path = require("path");
+const db = require("../models");
+const {Op} = require("sequelize")
 
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
@@ -20,7 +22,22 @@ module.exports = function(app) {
     if (!req.user){
      return res.redirect('/employee/login')
     }
-    res.render('pizzaManage')
+    
+    db.Pizza.findAll({
+      attributes: ["id"],
+      where: {
+          status: {
+              [Op.lt]: 5
+          }
+      }
+    }).then(function (response) {
+      console.log(response)
+      res.render('pizzaManage', { pizza: response })
+    }).catch((err) => {
+      console.log("This is an error")
+        console.log(err)
+        res.status(401).json(err);
+    })
   });
 
   app.get("/employee/login", function(req, res) {

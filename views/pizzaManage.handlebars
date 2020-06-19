@@ -11,9 +11,9 @@
     <div class="column is-one-quarter">
     </div>
 {{!-- Pizza's to edit dropdown menu --}}
-    <div class="dropdown is-hoverable">
+    <div class="dropdown is-hoverable" style="height:40px">
         <div class="dropdown-trigger">
-            <button class="button is-rounded is-dark" aria-haspopup="true" aria-controls="dropdown-menu">
+            <button class="button dropdown-button is-rounded is-dark" aria-haspopup="true" aria-controls="dropdown-menu">
                 <span>Pizza Orders</span>
                 <span class="icon is-small">
                     <i class="fas fa-angle-down" aria-hidden="true"></i>
@@ -21,13 +21,11 @@
             </button>
         </div>
         <div class="dropdown-menu" id="dropdown-menu" role="menu">
-            {{#each pizza}}
             <div class="dropdown-content">
-                <a href="/employee/:id" class="dropdown-item pizza" data-id="{{id}}">
-                    Pizza ID: {{id}}
-                </a>
+                {{#each pizza}}
+                <a class="dropdown-item pizza" data-id="{{this.dataValues.id}}">Pizza ID: {{this.dataValues.id}}</a>
+                {{/each}}
             </div>
-            {{/each}}
         </div>
     </div>
 
@@ -51,8 +49,8 @@
                     </button>
                 </div>
                 <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                    <div class="dropdown-content status">
-                        <a href="#" class="dropdown-item" data-stat="1">
+                    <div class="dropdown-content">
+                        <a href="#" class="dropdown-item status" data-stat="1">
                             Starting
                         </a>
                         <a href="#" class="dropdown-item status" data-stat="2">

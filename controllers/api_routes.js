@@ -94,4 +94,23 @@ app.get("api/pizza/customer/:phone_number", function(req, res) {
     })
 })
 
+
+app.put("/api/pizza", function(req, res) {
+    db.Pizza.update({
+        status: req.body.status
+      }, {
+        where: {
+          id: req.body.id
+        }
+      }).then(function(pizzaData) {
+        res.json(pizzaData);
+      })
+      .catch(function(err) {
+        console.log("This is an error")
+        console.log(err)
+        if (err)
+          throw err;
+      });
+})
+
 }

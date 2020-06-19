@@ -35,3 +35,7 @@ $(document).ready(function() {
         });
     }
 });
+
+$("#signup").click(()=>{
+    window.location.href = "/employee/signup"
+})

@@ -15,14 +15,13 @@ const getStatus = () => {
     }
     // when a pizza status is true remove class is-invisible from the tracker page
     const displayStatus = (status) => {
-        console.log("poop")
         console.log(status)
     switch(status){
         case 1 :
         $("#startedHeader").removeClass("is-invisible")
         break;
         case 2 :
-        $("#bakingHeader").removeClass("is-invisible")
+        $("#ovenHeader").removeClass("is-invisible")
         break;
         case 3 :
         $("#boxingdHeader").removeClass("is-invisible")

@@ -13,7 +13,7 @@ module.exports = function(app) {
   });
 
   app.get("/tracker", function(req, res) {
-    res.render('tracker');
+    res.render('Tracker');
   });
 
   // Here we've add our isAuthenticated middleware to this route.

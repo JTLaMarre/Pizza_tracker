@@ -1,4 +1,24 @@
 .has-bg-img{
+    height: 80vh;
     background-image: url(../images/baked-pizza-on-pizza-peel-in-oven-905847.jpg);
+    background-position: center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
     background-size: cover;
+    opacity:100%;
+    /* background-color: #999; */
+    /* clip-path: "polygon(100% 0, 100% 75%, 69% 100%, 0 85%, 0 0)"; */
+    /* background-attachment: "fixed"; */
+}
+
+/* .navbar{
+    background-color: darkgray;
+    padding: 0%;
+    margin: 0%;
+    text-align: center;
+    align-items: center;
+    border: 0%;
+} */
+.button{
+    margin: 10px;
 }
